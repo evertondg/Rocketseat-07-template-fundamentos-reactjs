@@ -100,8 +100,8 @@ const Dashboard: React.FC = () => {
             </thead>
 
             <tbody>
-              {transactions.map((transaction, index) => (
-                <tr key={`line${index}`}>
+              {transactions.map(transaction => (
+                <tr key={`line${transaction.title}`}>
                   <td className="title">{transaction.title}</td>
                   <td className={transaction.type}>
                     {transaction.type === 'outcome' && ' - '}
